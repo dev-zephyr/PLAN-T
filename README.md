@@ -9,16 +9,18 @@
   * 커뮤니티 게시판을 통한 문의 및 답변 과 정보공유
 
  ### Environment
-  ####back
-  JDK8, Spring MVC, MyBatis, Tomcat 8.5,lombok
-  ####front
-  HTML5, Javascript, jQuery, Bootstrap, JSTL, Jsp
-  ####database
-  Oracle
-  ####개발도구
-  Eclipse, STS, vs code, sql developer, 
-  ####협업도구
-  notion, github 
+  * back
+    * JDK8, Spring MVC, MyBatis, Tomcat 8.5,lombok
+  
+  * front
+    * HTML5, Javascript, jQuery, Bootstrap, JSTL, Jsp
+  
+  * database
+    * Oracle
+  * 개발도구
+    * Eclipse, STS, vs code, sql developer, 
+  * 협업도구
+    * notion, github 
 
 
  ### Function
@@ -44,7 +46,7 @@
       * 장바구니에 상품이 존재하지 않을 때 빈 장바구니 페이지 보여주기
 
   *order 
-    *상품 주문 
+    * 상품 주문 
       * 상품 주문시 필수입력사항 입력여부 확인 기능
       * 주문완료시 주문완료 페이지 이동
 
@@ -64,7 +66,7 @@
       * 회원정보 수정 기능
       
    * Community
-      *게시판CRUD
+      * 게시판CRUD
          * 게시판 리스트 구현
          * 게시글 확인 구현
          * 게시글 작성 구현
@@ -73,5 +75,5 @@
          * 게시글 파일첨부 구현
       * 댓글
          * 댓글 작성 구현
-         *댓글 삭제 구현
-    * 검색(제목/작성자/내용) 구현
+         * 댓글 삭제 구현
+      * 검색(제목/작성자/내용) 구현
