@@ -1,12 +1,14 @@
 # PLAN:T
  - Spring MVC webProject
  
+ 
  ### Explanation
   식물에 관한 정보를 공유, 사용자에게 알맞는 타입의 식물을 추천해주고 이를 구매할 수 있도록 도와주는 서비스
  
   * 1:1 맞춤형 식물 소개, 판매
   * 식물에 관한 정보 제공
   * 커뮤니티 게시판을 통한 문의 및 답변 과 정보공유
+
 
  ### Environment
   * back
@@ -17,8 +19,10 @@
   
   * database
     * Oracle
+  
   * 개발도구
-    * Eclipse, STS, vs code, sql developer, 
+    * Eclipse, STS, vs code, sql developer
+    
   * 협업도구
     * notion, github 
 
@@ -31,7 +35,8 @@
   * product
     * 상품 리스트 
       * 이름순/ 가격순 오름차순,내림차순 정렬 
-      * 더보기 
+      * 더보기
+      
     * 상품 상세정보 
       * 현재 접속페이지 url 복사 기능
       * 해당 상품 즉시 구매 기능
