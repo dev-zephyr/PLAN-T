@@ -1,0 +1,83 @@
+
+/* HEADER */
+header {
+	/* border: 1px solid chocolate; */
+	justify-content: center;
+	width: 90%;
+}
+
+.header_subList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 0px;
+	justify-content: flex-end;
+}
+
+.header_subList li {
+	list-style-type: none;
+	padding: 0px 10px;
+}
+
+.header_subList li a {
+	color: black;
+	text-decoration: none;
+}
+
+.header_subList li a:hover {
+	color: #ffcc00;
+	text-decoration: none;
+}
+
+#header_mainList {
+	width: 100%;
+}
+
+#header_mainList.fixed {
+	color: black;
+	top: 0;
+	left: 4;
+	justify-content: center;
+	position: fixed;
+	width: 90%;
+	z-index: 1;
+}
+
+#header_mainList ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#header_mainList ul li {
+	justify-content: space-evenly;
+	font-size: 25px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#header_mainList ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+#header_mainList ul li a:hover {
+	background: linear-gradient(to top, #ffe400 50%, transparent 50%);
+	text-decoration: none;
+}
+
+.header_logo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#logo_img {
+	justify-content: space-evenly;
+}
+
+h1, h2, h3, h4, h5, p {
+	text-align: center;
+}

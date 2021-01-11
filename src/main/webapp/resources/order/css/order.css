@@ -1,0 +1,287 @@
+/* HEADER */
+header {
+	/* border: 1px solid chocolate; */
+	justify-content: center;
+	width: 90%;
+	margin-top: 0px;
+    margin-left: 110px;
+}
+
+.header_subList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 0px;
+	justify-content: flex-end;
+	margin-top: 20px;
+	padding:2px;
+	font-size:15px;
+}
+
+.header_subList li {
+	list-style-type: none;
+	padding: 0px 10px;
+}
+
+.header_subList li a {
+	color: black;
+	text-decoration: none;
+}
+
+.header_subList li a:hover {
+	color: #ffcc00;
+	text-decoration: none;
+}
+
+#header_mainList {
+	width: 100%;
+	padding: 10px ;
+}
+
+#header_mainList.fixed {
+	color: black;
+	top: 0;
+	left: 4;
+	justify-content: center;
+	position: fixed;
+	width: 90%;
+	z-index: 1;
+}
+
+#header_mainList ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	
+}
+
+#header_mainList ul li {
+	justify-content: space-evenly;
+	font-size: 25px;
+	list-style-type: none;
+	text-decoration: none;
+	text-align: center;
+
+}
+
+#header_mainList ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+#header_mainList ul li a:hover {
+	background: linear-gradient(to top, #ffe400 50%, transparent 50%);
+	text-decoration: none;
+}
+
+.header_logo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 5px 0px;
+	margin-top: 15px;
+	
+}
+
+#logo_img {
+	justify-content: space-evenly;
+}
+
+    label {
+        font-size: 20px;
+        text-align: left;
+        margin-left: 30px;
+        width: 140px;
+    }
+    
+    h1 {
+        padding-left: 30px;
+    }
+    
+    h2 {
+        color: gray;
+        padding-left: 30px;
+    }
+    
+    table th,
+    td {
+        text-align: center;
+    }
+    /* 주문 메인 컨테이너 */
+    
+    .ol_container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 30px 10px;
+    }
+    /* 주문리스트 */
+    
+    #ol_list {
+        margin: 10px auto 20px auto;
+        padding: 20px 5px;
+        width: 70%;
+    }
+    
+    #ol_addr_checkbox {
+        margin-left: 30px;
+    }
+    /* 주문자정보 */
+    
+    #order_name,
+    #order_phone,
+    #order_email {
+        border: none;
+    }
+    
+    #ol_info {
+        margin: 10px auto 20px auto;
+        padding: 20px 5px;
+        width: 70%;
+    }
+    
+    .ol_content {
+        width: 40%;
+    }
+    /* 배송정보 */
+    
+    #ol_addr {
+        margin: 10px auto 20px auto;
+        padding: 20px 5px;
+        width: 70%;
+    }
+    
+    .postcodify_details {
+        margin-top: 5px;
+        margin-left: 175px;
+        width: 40%;
+    }
+    
+    #ol_addr_btn {
+        background-color: #6f9f77;
+    }
+    /* 할인정보 */
+    
+    #ol_coupon {
+        margin: 10px auto 20px auto;
+        padding: 20px 5px;
+        width: 70%;
+    }
+    /* 결제정보 */
+    
+    #ol_payment {
+        margin: 10px auto 20px auto;
+        padding: 20px 5px;
+        width: 70%;
+    }
+    
+    li {
+        float: left;
+        list-style: none;
+        padding: 5px 20px;
+    }
+    
+    .ol_payment_content {
+        padding-left: 30px;
+    }
+    /* 주문자동의 */
+    
+    #ol_final_price {
+        background-color: #d5ecb8;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 50px;
+        width: 100%;
+        height: 100px;
+    }
+    
+    .ol_1 {
+        font-size: 25px;
+        padding-left: 5px;
+        padding-right: 50px;
+        text-align: center;
+    }
+    
+    .ol_2 {
+        font-size: 25px;
+        padding: auto 50px;
+    }
+    /* 버튼그룹 */
+    
+    .ol_btngroup {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-content: flex-start;
+    }
+    
+    #ol_orderbtn {
+        background-color: #6f9f77;
+        border-color: #6f9f77;
+        margin: 10px 20px;
+        padding: 10px 20px;
+    }
+    
+    #ol_cancelbtn {
+        background-color: rgba(223, 221, 221, 0.877);
+        border-color: rgba(223, 221, 221, 0.877);
+        margin: 10px 20px;
+        padding: 10px 20px;
+    }
+    
+    #ol_orderbtn a,
+    #ol_cancelbtn a {
+        color: black;
+        text-decoration: none;
+    }
+    /* FOOTER */
+    
+    footer {
+        margin-top: 50px;
+        padding: 0 20px 0 20px;
+    }
+    
+    .footerAll {
+        display: inline-block;
+        width: 19.5%;
+        height: 250px;
+    }
+    
+    .footerAll ul {
+        padding-left: 0px;
+    }
+    
+    .footerAll ul li {
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        justify-content: center;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    /* 상관없음 */
+    
+    .footerAll ul li a {
+        color: grey;
+        text-decoration: none;
+    }
+    
+    .footerAll ul li a:hover {
+        color: #ffcc00;
+        text-decoration: none;
+    }
+    
+    .footerAll i {
+        padding: 10px 10px;
+    }
+    
+    #footerLast {
+        color: grey;
+        text-align: center;
+    }

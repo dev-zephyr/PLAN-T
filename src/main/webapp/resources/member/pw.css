@@ -1,0 +1,54 @@
+body {
+
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.findPW_box {
+    border: #517957 solid 3px;
+    color: #517957;
+    padding: 50px 100px 85px 100px;
+    margin-top: 100px;
+    width: 350px;
+}
+
+.findPW_box h1 {
+    border-bottom: 6px solid #517957;
+    font-size: 45px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0px 10px;
+    width: 320px;
+}
+
+#findPW_id,
+#findPW_email,
+#findPW_name {
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-size: 25px;
+    height: 30px;
+    margin: 8px 0;
+    overflow: hidden;
+    padding: 8px 0;
+    width: 98%;
+}
+
+#findPW_btn {
+    background-color: #D0A330;
+    border: 2px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 5px;
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: grey;
+    font-size: 15px;
+}

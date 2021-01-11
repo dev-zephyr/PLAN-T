@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="orderMapper">
+	
+	<!-- 주문 -->
+	<insert id="insert">
+		insert into p_order 
+			(o_No, 
+			m_Id, 
+			o_Count, 
+			o_Price, 
+			o_Email, 
+			o_Phone, 
+			o_Addr1, 
+			o_Addr2, 
+			o_Addr3, 
+			o_Content)
+		values (
+			SEQ_O_NO.nextval, 
+			#{mId}, 
+			#{o_Count}, 
+			#{o_Price},
+			#{o_Email},
+			#{o_Phone},
+			#{o_Addr1}, 
+			#{o_Addr2}, 
+			#{o_Addr3}, 
+			#{o_Content})
+	</insert>
+	
+	<!-- 주문 목록 역순 -->
+	<select id="list" resultType="org.comstudy21.vo.OrderVO">
+		select * from p_order 
+				where m_Id = #{mId}
+				ORDER BY ROWNUM DESC
+	</select>
+	
+	<!-- 주문목록 집어넣기 -->
+	<insert id="insertCartToOrder">
+		insert into o_product(o_no, p_name, p_count, p_price)
+			values(
+			#{o_No}, #{p_Name}, #{p_Count}, #{p_Price}
+		)
+	</insert>
+	
+	<!-- 하나만 빼오기 -->
+	<select id="selectLastOrder" resultType="org.comstudy21.vo.OrderVO">
+		select * from
+			(select * from p_order 
+				where m_Id = #{mId}
+				ORDER BY ROWNUM DESC)
+			WHERE ROWNUM = 1
+	</select>
+	
+	<select id="selectOrderList" resultType="org.comstudy21.vo.OrderVO">
+		select * from
+			(select * from p_order 
+				where m_Id = #{mId}
+				ORDER BY ROWNUM DESC)
+			WHERE ROWNUM between 1 and 5
+	</select>
+	
+	<!-- no 빼오기 -->
+	<select id="selectLastNo" resultType="int">
+		select o_No from
+			(select * from p_order 
+				where m_Id = #{mId}
+				ORDER BY ROWNUM DESC)
+			WHERE ROWNUM = 1
+	</select>
+	
+	<!-- 주문상품목록 리스트 -->
+	<select id="listOrderProduct" resultType="org.comstudy21.vo.O_productVO">
+		select * from o_product where o_no = #{o_No}
+	</select>
+	
+	
+</mapper>

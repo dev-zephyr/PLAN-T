@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cartMapper">
+	<!-- 카트 추가 -->
+	<insert id="insert" parameterType="org.comstudy21.vo.CartVO">
+		insert into cart (c_no, m_Id, p_name, c_count)
+	   		values (seq_c_no.nextval, #{m_Id}, #{p_name}, #{c_count})
+	</insert>
+	<!-- 카트 중복체크  -->
+	<select id="check" resultType="org.comstudy21.vo.CartVO">
+		select p_name from cart where m_id=#{m_Id} and p_name=#{p_name}
+	</select>
+	<!-- 카트 리스트 -->
+	<select id="list" resultType="org.comstudy21.vo.CartVO">
+		select
+		    c.m_Id, c.c_no, c.p_name, c.c_count,
+		    p.p_price as c_price
+		from cart c
+			inner join product p on c.p_name = p.p_name where c.m_Id = #{m_Id}
+
+	</select> 
+	
+	<!-- 카트업데이트 -->
+	<update id="update">
+		update cart set c_count = #{c_count} where p_name=#{p_name} and m_Id = #{m_Id}
+	</update>
+	
+	<!-- 카트 삭제 -->
+	<delete id="delete">
+		delete cart
+		    where c_no = #{c_no}
+		        and m_Id = #{m_Id}
+	</delete>
+	
+	<delete id="deleteByName">
+		delete cart
+		    where p_name = #{p_name}
+		        and m_Id = #{m_Id}
+	</delete>
+	
+
+	<select id="selectCount" parameterType="String" resultType="int">
+		select c_count from cart
+		where p_name = #{p_name} and m_id = #{m_Id}
+	</select>
+	
+</mapper>
