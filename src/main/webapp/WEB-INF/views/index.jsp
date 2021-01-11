@@ -46,7 +46,7 @@
             <li><a href="/cart/cart">Cart🛒</a></li>
         </ul>
         <ul class="header_logo">
-           <a href="/"><img id="logo_img" src="/resources/main/img/logo.jpg" alt="logo"></a> 
+           <a href="/"><img id="logo_img" src="/resources/main/img/logo.jpg" alt="logo" style="width:80px; height:112px;"></a> 
         </ul>
     </header>
 
@@ -126,10 +126,7 @@
         </div>
     </div>
 
-    <!-- Top Button -->
-    <div id="topButton">
-        <i id="TopBtn" class="fas fa-chevron-up"></i>
-    </div>
+  
 
     <!-- MainPage 끝 -->
     <%@ include file="include/footer.jsp" %>
@@ -191,6 +188,8 @@
    	
    	
    	</script>
+   	
+ 
    
 </body>
 

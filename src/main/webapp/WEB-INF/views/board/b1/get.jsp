@@ -48,7 +48,7 @@
             <li><a href="/cart/cart">Cart🛒</a></li>
         </ul>
         <ul class="header_logo">
-            <img id="logo_img" src="/resources/main/img/logo.jpg" alt="logo">
+            <a href="/"><img id="logo_img" src="/resources/main/img/logo.jpg" alt="logo" style="width:80px; height:112px;"></a> 
         </ul>
     </header>
 
@@ -114,19 +114,17 @@
                         <p class="content_title text-left">
                         	<c:out value="${read.gTitle }" />
                         </p>
-                        <div class="d-flex justify-content-between">
-                            <div>
+                        <div class="row">
+                            <div class="col-xl-6">
                                 <span class="content_regdate">
                                 	<fmt:formatDate value="${read.gDate }" pattern="yyyy-MM-dd"/>
                                 </span>
                                 <span class="content_hits badge bg-success"><c:out value="${replyCnt }" /></span>
                             </div>
-                            <div>
-                            	<c:if test="${member.mId eq read.gWriter}">
-	                                <button id="modify" class="btn btn-success round">수정</button>
-	                                <button id="remove" class="btn btn-success round">삭제</button>
-                                </c:if>
+                            <div class="col-xl-6 text-right">
+                                <a class="a_list" href='/board/list?page=${scri.page }'><button class = "btn btn-success round btn-sm ">목록</button></a>
                             </div>
+                            
                         </div>
                         <hr>
                         <div class="content_text_box" style="min-height: 500px;">  
@@ -141,8 +139,15 @@
                                 <c:out value="${read.gContents }" />
                             </textarea>
                         </div>
-
-                        <hr style="margin-top: 40px;">
+						
+							<div class="text-right">
+                            	<c:if test="${member.mId eq read.gWriter}">
+	                                <button id="modify" class="btn btn-success round">수정</button>
+	                                <button id="remove" class="btn btn-success round">삭제</button>
+                                </c:if>
+                            </div>
+						
+                        <hr style="margin-top: 20px;">
 
                         <!-- 댓글 작성창 -->
                         
@@ -296,18 +301,6 @@
 	
 		$(document).ready(function() {
 			
-			// header
-	        var lnb = $("#header_mainList").offset().top;
-	        $(window).scroll(function () {
-	            var window = $(this).scrollTop();
-
-	            if (lnb <= window) {
-	                $("#header_mainList").addClass("fixed");
-	            } else {
-	                $("#header_mainList").removeClass("fixed");
-	            }
-	        })
-	        
 	        // 댓글창 로그인,비로그인 차이 두기
 	        var loginId = '<c:out value="${member.mId}" />';
 	        

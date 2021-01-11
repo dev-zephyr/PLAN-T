@@ -22,7 +22,23 @@ const init = () => {
     refreshPage();
 };
 
+const fadeoutAll = () => {
+    console.log('fadeoutAll() 호출');
+    const imgBox = document.getElementById('imgWrap');
+    const qBox = document.getElementById('answerWrap');
 
+    imgBox.style.animation = "fadeOut 0.5s backwards";
+    qBox.style.animation = "fadeOut 0.5s backwards";
+}
+
+const fadeInAll = () => {
+    console.log('fadeIn() 호출');
+    const imgBox = document.getElementById('imgWrap');
+    const qBox = document.getElementById('answerWrap');
+
+    imgBox.style.animation = "fadeIn 0.6s forwards";
+    qBox.style.animation = "fadeIn 0.6s forwards";
+}
 
 const printName = () => {
 	  const guestName = document.getElementById('guestName').value;
@@ -36,6 +52,13 @@ const enter = () => {
     }
 
 }
+
+const refreshPage = () =>{
+	const resetBtn = document.getElementById('resetBtn');
+	resetBtn.onclick = () => {
+		location.reload();
+	}
+};
 
 const moveToTestPage = () => {
 	guest.name = document.getElementById('guestName').value;
@@ -85,7 +108,6 @@ const saveResult = (btnId) => {
     const clickedBtn = qnaList[i - 1].answer[btnIdx];
     const BtnPropertyName = getPropertyName(i);
     setProperty(testResult, BtnPropertyName, clickedBtn);
-
 };
 
 
@@ -140,14 +162,6 @@ const goNext = (btn) => {
         // 질문 넘어가면 이미지 바꾸기
         leftImg.setAttribute('src', '/resources/plantTest/images/img' + imgNum + '.png');
         console.log('imgNum은 ' + imgNum);
-        if (imgNum === 6) {
-            const imgWrap = document.getElementById('imgWrap');
-            const answerWrap = document.getElementById('answerWrap');
-            imgWrap.style.paddingRight = '10%';
-            // answerWrap.style.paddingRight = '2%'; // * 얘를 나중에 할까말까 고오미이이인
-            leftImg.style.width = '110%';
-            leftImg.style.height = '100%';
-        }
         // 질문/대답 바꾸기
         setTimeout(() => {
             addQuestion(qnaList[i].question);
@@ -198,37 +212,15 @@ const moveToResultPage = (callback) => {
         resultPage.style.display = 'flex';
         resultPage.style.animation = 'fadeIn 1s';
     }, 2500);
-    // const showResult = callback;
     callback();
 };
 
-// 3->4번 넘어갈때 뒤에 그림 겹쳐보이는거..
-// 함수 파라미터로 태그 id받아서 다 fadeOut 하는걸로 바꿀가..초도 받아서..
-const fadeoutAll = () => {
-    console.log('fadeoutAll() 호출');
-    const imgBox = document.getElementById('imgWrap');
-    const qBox = document.getElementById('answerWrap');
 
-    imgBox.style.animation = "fadeOut 0.5s backwards";
-    qBox.style.animation = "fadeOut 0.5s backwards";
-}
-
-const fadeInAll = () => {
-    console.log('fadeIn() 호출');
-    const imgBox = document.getElementById('imgWrap');
-    const qBox = document.getElementById('answerWrap');
-
-    imgBox.style.animation = "fadeIn 0.6s forwards";
-    qBox.style.animation = "fadeIn 0.6s forwards";
-}
 
 const getResult = () => {
     // 새로운 객체에 testResult 복사
     let finalResult = {};
     Object.assign(finalResult, testResult);
-    // 객체 property === test결과값 뽑기
-    // let num = 0;
-    // const resultScore = finalResult.score;
     finalResult.lv = finalResult.score > 21 ? 'high' : finalResult.score > 14 ? 'normal' : 'easy';
     delete finalResult.score; // 점수 프로퍼티 삭제 (lv로 변경하고 나면 필요없으니까)
     const resultTitle = document.getElementById('resultTitle');
@@ -238,13 +230,11 @@ const getResult = () => {
         data: finalResult,
         type: 'POST',
         success: function (data) {
-            // 성공했을때 여기에서 처리
             const parseData = JSON.parse(data);
             const resultImg = document.getElementById('resultImg');
             resultImg.setAttribute('src', '/resources/product/images/thumbnail/'+ parseData.plantName + '0.png');
             const resultP = document.getElementById('resultP');
             const txt = parseData.plantName;
-            
             resultP.innerHTML = txt;
         },
         error: function (e) {
@@ -282,12 +272,7 @@ const makeShareFunction = () => {
 	}
 };
 
-const refreshPage = () =>{
-	const resetBtn = document.getElementById('resetBtn');
-	resetBtn.onclick = () => {
-		location.reload();
-	}
-};
+
 
 const goToShop = ()=> {
 	const result = document.getElementById('resultP').innerHTML;

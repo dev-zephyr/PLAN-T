@@ -30,6 +30,11 @@ ol, ul {
 	list-style: none;
 }
 
+a {
+	text-decoration: none;
+}
+
+
 a:link {
 	color: black;
 }
@@ -38,10 +43,14 @@ a:visited {
 	color: black;
 }
 
-a {
-	text-decoration: none;
+
+.a_list {
+	color: white;
 }
 
+.a_list:visited {
+	color: white;
+}
 textarea {
 	text-align: left;
 }

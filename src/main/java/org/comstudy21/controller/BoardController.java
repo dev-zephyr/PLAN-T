@@ -107,7 +107,7 @@ public class BoardController {
 		model.addAttribute("pageMaker", pageMaker);
 			
 		
-		return "board/b1/list";
+		return "board/b1/list";  
 	}
 	
 	// 게시판 조회

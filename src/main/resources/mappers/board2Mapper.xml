@@ -97,7 +97,7 @@
 	
 	
 	<select id="getReplyCnt" resultType="int">
-		select count(*) from gcomment
+		select count(*) from gcomment2
 		where gno = #{gNo}
 	</select>
 	

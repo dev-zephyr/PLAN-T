@@ -83,7 +83,7 @@
             <li><a href="/cart/cart">Cart🛒</a></li>
         </ul>
         <ul class="header_logo">
-            <img id="logo_img" src="/resources/main/img/logo.jpg" alt="logo">
+             <a href="/"><img id="logo_img" src="/resources/main/img/logo.jpg" alt="logo" style="width:80px; height:112px;"></a> 
         </ul>
     </header>
 

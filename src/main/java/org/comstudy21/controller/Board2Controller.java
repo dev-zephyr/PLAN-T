@@ -184,7 +184,7 @@ public class Board2Controller {
 		rttr.addAttribute("searchType", scri.getSearchType());
 		rttr.addAttribute("keyword", scri.getKeyword());
 		
-		return "redirect:/board/readView";
+		return "redirect:/board2/readView";
 	}
 	
 	 //댓글 삭제
