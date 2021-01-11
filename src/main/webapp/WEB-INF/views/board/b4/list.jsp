@@ -379,7 +379,7 @@
        			str += wrpperCard1_close;
        			str += wrpperCard2_open;
        			str += '<span class="card_content card_content_2">' + list[i].gTitle + '</span>';
-       			str += '<span class="badge bg-success">' + list[i].gViews + '</span>';
+       			str += '<span class="badge bg-success">' + list[i].replyCnt + '</span>';
        			str += wrpperCard2_close;
        			
        			cnt++;
@@ -571,6 +571,7 @@
         			alert('댓글 등록 완료');
         			$(".comment").empty();
         			getComment(getGno);
+        			$("#form_comment").find('input[name="gcContents"]').val("");
         		},
         		error : function(err) {
         			alert('댓글 등록에 실패하였습니다');
