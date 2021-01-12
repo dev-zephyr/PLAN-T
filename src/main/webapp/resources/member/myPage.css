@@ -243,11 +243,20 @@ ul li {
     align-self: center;
 }
 
+#ordercheck1 {
+	padding-right : 10px;
+}
+
 /* 최근등록게시글 */
 
 .latestPost {
     border-bottom: 1px solid black;
     padding: 50px auto;
+    
+}
+
+.latestPost > h2 {
+	padding-left : 0px;
 }
 
 .latestPostTitle {

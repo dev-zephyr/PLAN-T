@@ -293,6 +293,7 @@ form hr {
 .order_now {
 	display: flex;
 	align-items: center;
+	justify-content : center;
 }
 
 .order_later {
