@@ -12,7 +12,7 @@
 
  ### Environment
   * back
-    * JDK8, Spring MVC, MyBatis, Tomcat 8.5,lombok
+    * Java8, Spring MVC, MyBatis, Tomcat 8.5, lombok, Gson
   
   * front
     * HTML5, Javascript, jQuery, Bootstrap, JSTL, Jsp
